@@ -1,0 +1,106 @@
+/* XAMS FIT 
+ Castro, Stephen Sam V.
+ WD - 201*/
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --font: "Archivo", "Arial Black", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.25;
+  background: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+/*NAV*/
+.nav {
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 48px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.nav .links { display: flex; gap: 120px; }
+.nav a:hover { text-decoration: underline; }
+
+/*PAGE BODY*/
+main {
+  flex: 1;
+  padding: 40px 48px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 56px;
+}
+.light main { background: var(--white); color: var(--black); }
+.dark  main { background: var(--black); color: var(--white); }
+.dark  .nav { border-bottom: 1px solid #222; }
+
+.tagline {
+  align-self: flex-end;
+  margin-top: auto;
+  text-align: right;
+  font-size: 30px;
+  font-weight: 900;
+  max-width: 12ch;
+}
+
+.logo { width: 260px; height: 260px; border-radius: 50%; flex-shrink: 0; }
+
+/*HOME*/
+.home-top { display: flex; gap: 32px; align-items: flex-start; }
+.home-top p { font-size: 18px; max-width: 44ch; }
+.home-top p + p { margin-top: 14px; }
+
+.home-banner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.home-banner img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  background: var(--black);
+}
+.home-banner h2 { font-size: 30px; font-weight: 900; max-width: 14ch; }
+
+/*PRODUCT*/
+.products {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding-left: 4%;
+  flex: 1;
+}
+.product { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 13px; text-align: center; }
+.product img { width: 200px; height: 250px; object-fit: cover; }
+.price { font-size: 28px; font-weight: 900; line-height: 1.2; }
+
+/* ---------- ABOUT ---------- */
+.about { display: flex; gap: 40px; align-items: flex-start; }
+.about .copy { display: flex; flex-direction: column; gap: 14px; font-size: 13px; max-width: 90ch; }
+.about-bottom { display: flex; gap: 60px; align-items: flex-end; justify-content: space-between; }
+.about-bottom .copy { display: flex; flex-direction: column; gap: 14px; font-size: 13px; max-width: 90ch; }
+.about .contact, .about-bottom .contact { font-size: 11px; }
+
