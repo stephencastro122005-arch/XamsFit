@@ -97,7 +97,7 @@ main {
 .product img { width: 200px; height: 250px; object-fit: cover; }
 .price { font-size: 28px; font-weight: 900; line-height: 1.2; }
 
-/* ---------- ABOUT ---------- */
+/*ABOUT*/
 .about { display: flex; gap: 40px; align-items: flex-start; }
 .about .copy { display: flex; flex-direction: column; gap: 14px; font-size: 13px; max-width: 90ch; }
 .about-bottom { display: flex; gap: 60px; align-items: flex-end; justify-content: space-between; }
